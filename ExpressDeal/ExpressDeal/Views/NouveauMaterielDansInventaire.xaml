@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="ExpressDeal.Views.NouveauMaterielDansInventaire">
+    <ContentPage.Content>
+        <StackLayout Spacing="3" Padding="15">
+
+            <Label Text="Choissisez un matériel" FontSize="Medium" />
+            <!--<combobox:SfComboBox HeightRequest="40" x:Name="comboBox"/>-->
+            <Picker x:Name="pickerMateriels"></Picker>
+            <Label Text="Quantite" FontSize="Medium" />
+            <Editor Text="{Binding Description}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+            
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Enregistrer"  HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Annuler"  HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

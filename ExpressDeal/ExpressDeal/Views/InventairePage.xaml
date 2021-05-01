@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpressDeal.Views.InventairePage" >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ajouter dans Inventaire   🛒"  Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <FlexLayout JustifyContent="SpaceBetween" Padding="10">
+                <Label Text="id"></Label>
+                <Label Text="Nom"></Label>
+                <Label Text="Quantite"></Label>
+            </FlexLayout>
+
+            <ListView x:Name="lvInventaire" ItemSelected="lvInventaire_ItemSelected" Margin="0,30,0,0" >
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell >
+                            <ViewCell.View >
+                                <StackLayout Orientation="Horizontal"  HeightRequest="100" >
+                                    <Label  VerticalOptions="Center" HorizontalOptions="Center"
+                                                FontSize="16"
+                                               Text="{Binding id}"></Label>
+                                    <Label x:Name="lblNomMateriel" WidthRequest="340" HorizontalOptions="Center" VerticalOptions="Center" Padding="0,10,0,0" HorizontalTextAlignment="Center" FontSize="16"
+                                               Text="{Binding nomMateriel}"></Label>
+                                    <Label   VerticalOptions="Center" HorizontalOptions="Center" FontSize="16"
+                                               Text="{Binding quantite}"></Label> 
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

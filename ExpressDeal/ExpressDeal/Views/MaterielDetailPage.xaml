@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpressDeal.Views.MaterielDetailPage" Title="Details" >
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Heading">#7d83ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Margin="0,20,0,0">
+            
+
+            <FlexLayout Direction="Column" >
+                <Label Text="{Binding nom}" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="{StaticResource Heading}" Padding="0"> </Label>
+                <Label Text="{Binding taille}" FontSize="Caption" Padding="10,0,10,0" HorizontalTextAlignment="Center"></Label>
+             </FlexLayout>
+            
+            <Label Text="{Binding description}" Padding="10,0,10,0" HorizontalTextAlignment="Center"></Label>
+            <Label Text="{Binding marque , StringFormat='Marque : {0:F2}' }" Padding="10,0,10,0" HorizontalTextAlignment="Center"></Label>
+            <Label Text="{Binding dureeLocation , StringFormat='Duree de Location : {0:D} jours' }" Padding="10,0,10,0" HorizontalTextAlignment="Center"></Label>
+            <Label Text="{Binding coutLocation , StringFormat='Coût de Location : {0:F2} €' }" Padding="10,0,10,0" HorizontalTextAlignment="Center">
+            </Label>
+            <Label Text="{Binding coutRemplacement , StringFormat='Coût de Remplacement : {0:F2} €' }" Padding="10,0,10,0" HorizontalTextAlignment="Center">
+            </Label>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ExpressDeal.Views.LoginPage"
+             Shell.NavBarIsVisible="False" Title="{Binding Title}" Shell.FlyoutBehavior="Disabled">
+    <ContentPage.Content>
+        <!--<StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+        </StackLayout>-->
+
+        <!--Left Top Right Bottom-->
+        <StackLayout Spacing="3" Padding="15" VerticalOptions="Center" >
+            <Image Source="express_deal.png" Aspect="AspectFit" Margin="0,0,0,50" HorizontalOptions="Center" />
+            
+            <Label Text="Login" FontSize="Medium" />
+            <Entry FontSize="Medium" x:Name="login" />
+            <Label Text="Mot de passe" FontSize="Medium" Margin="0,30,0,0" />
+            <Entry  IsPassword="True" FontSize="Medium" x:Name="mdp" Margin="0"/>
+            <StackLayout Orientation="Horizontal" Margin="0,30,0,0">
+                <Button Text="Se Connecter"  HorizontalOptions="FillAndExpand" Clicked="Button_Clicked"></Button>
+                <!--<Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>-->
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

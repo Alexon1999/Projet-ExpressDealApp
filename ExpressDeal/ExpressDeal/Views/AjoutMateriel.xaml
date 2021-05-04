@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpressDeal.Views.AjoutMateriel">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Label Text="Créer un nouveau matériel"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" Margin="0,0,0,10" />
+                
+                <Label Text="Nom : " FontSize="Medium"  />
+                <Entry FontSize="Medium" x:Name="entryNom" />
+                
+                <Label Text="Description : " FontSize="Medium" Margin="0,30,0,0" />
+                <Editor x:Name="editorDescription"  AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+                
+                <Label Text="Marque : " FontSize="Medium" Margin="0,30,0,0" />
+                <Entry  FontSize="Medium" x:Name="entryMarque" />
+                
+                <Label Text="Durée de location : " FontSize="Medium" Margin="0,30,0,0" />
+                <Entry FontSize="Medium" x:Name="entryDureeLocation" />
+                
+                <Label Text="Coût de location : " FontSize="Medium" Margin="0,30,0,0" />
+                <Entry FontSize="Medium" x:Name="entryCoutLocation" Placeholder="mettre des chiffre avec virgule" />
+                
+                <Label Text="Coût de remplacement : " FontSize="Medium" Margin="0,30,0,0" />
+                <Entry FontSize="Medium" x:Name="entryCoutRemplacement" Placeholder="mettre des chiffre avec virgule" />
+                
+                <Label Text="Catégorie : " FontSize="Medium" Margin="0,30,0,0" />
+                <Picker x:Name="pickerCategories" Title="selectionnez une categorie" ItemDisplayBinding="{Binding Nom}" />
+                <!--<Picker.ItemsSource>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Id}"></Label>
+                            <Label Text="{Binding Nom}"></Label>
+                        </StackLayout>
+                    </Picker.ItemsSource>-->
+                
+                <Label Text="Taille : " FontSize="Medium" Margin="0,30,0,0" />
+                <Picker x:Name="pickerTaille" Title="selectionnez une taille">
+                    <Picker.Items >
+                        <x:String >Petit</x:String>
+                        <x:String>Moyen</x:String>
+                        <x:String>Grand</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Button Text="Ajouter" StyleClass="OkBtn" Clicked="Button_Clicked_1"></Button>
+                <Button Text="Annuler" StyleClass="CancelBtn"   Clicked="Button_Clicked"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

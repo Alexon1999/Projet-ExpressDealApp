@@ -9,7 +9,7 @@ namespace ExpressDeal
     public partial class App : Application
     {
         public static UserConnexion user;
-        public static string api_url = "https://8538de5ed239.ngrok.io";
+        public static string api_url = "https://3e44009155db.ngrok.io";
         public App()
         {
             InitializeComponent();

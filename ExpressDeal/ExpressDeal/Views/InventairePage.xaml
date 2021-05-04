@@ -1,40 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ExpressDeal.Views.InventairePage" >
+             x:Class="ExpressDeal.Views.InventairePage" Title="Inventaire"  >
 
-    <ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem Text="Ajouter dans Inventaire   🛒"  Clicked="ToolbarItem_Clicked" />
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
     
     <ContentPage.Content>
-        <StackLayout>
-            <FlexLayout JustifyContent="SpaceBetween" Padding="10">
-                <Label Text="id"></Label>
-                <Label Text="Nom"></Label>
-                <Label Text="Quantite"></Label>
-            </FlexLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2"></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition Height="120"></RowDefinition>
+            </Grid.RowDefinitions>
 
-            <ListView x:Name="lvInventaire" ItemSelected="lvInventaire_ItemSelected" Margin="0,30,0,0" >
-                <ListView.ItemTemplate >
-                    <DataTemplate >
-                        <ViewCell >
-                            <ViewCell.View >
-                                <StackLayout Orientation="Horizontal"  HeightRequest="100" >
-                                    <Label  VerticalOptions="Center" HorizontalOptions="Center"
-                                                FontSize="16"
-                                               Text="{Binding id}"></Label>
-                                    <Label x:Name="lblNomMateriel" WidthRequest="340" HorizontalOptions="Center" VerticalOptions="Center" Padding="0,10,0,0" HorizontalTextAlignment="Center" FontSize="16"
-                                               Text="{Binding nomMateriel}"></Label>
-                                    <Label   VerticalOptions="Center" HorizontalOptions="Center" FontSize="16"
-                                               Text="{Binding quantite}"></Label> 
-                                </StackLayout>
-                            </ViewCell.View>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+
+            <Grid Grid.Row="1" Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <FlexLayout JustifyContent="SpaceBetween"  Grid.Row="0">
+                    <Label Text="id"  Font ="Bold"></Label>
+                    <Label Text="Nom" Font ="Bold"></Label>
+                    <Label Text="Quantite" Font ="Bold"></Label>
+                </FlexLayout>
+
+                <ListView Grid.Row="1" x:Name="lvInventaire" ItemSelected="lvInventaire_ItemSelected"  >
+                    <ListView.ItemTemplate >
+                        <DataTemplate >
+                            <ViewCell >
+                                <ViewCell.View >
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20"></ColumnDefinition>
+                                            <ColumnDefinition></ColumnDefinition>
+                                            <ColumnDefinition Width="30"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                       
+
+                                        <Label Grid.Column="0" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center"
+                                            FontSize="16"
+                                                
+                                            Text="{Binding id}"></Label>
+                                        <Label Grid.Column="1"  Grid.Row="0" x:Name="lblNomMateriel"  HorizontalOptions="Center" VerticalOptions="Center"  HorizontalTextAlignment="Center" FontSize="14"
+                                            Text="{Binding nomMateriel}" ></Label>
+                                        <Label Grid.Column="2"  Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontSize="16"
+                                            Text="{Binding quantite}" ></Label>
+                                    </Grid>
+                                    
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </Grid>
+
+            <StackLayout Grid.Row="2" Padding="10">
+                <Button Text="Créer un matériel" Margin="0,0,0,5" Clicked="Button_Clicked" ></Button>
+                <Button Text="Ajouter Materiels dans inventaire    🛒" Clicked="ToolbarItem_Clicked" ></Button>
+            </StackLayout>
             
-        </StackLayout>
+            
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

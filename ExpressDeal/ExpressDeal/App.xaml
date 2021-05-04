@@ -11,7 +11,18 @@
             
             <Color x:Key="Primary">#2196F3</Color>
             <Color x:Key="Secondary">magenta</Color>
-           
+
+
+            <Style Class="CancelBtn" TargetType="Button">
+                <Setter Property="Background" Value="#f21170"></Setter>
+                <Setter Property="TextColor" Value="#fff"></Setter>
+            </Style>
+
+            <Style Class="OkBtn" TargetType="Button">
+                <Setter Property="Background" Value="#42b983"></Setter>
+                <Setter Property="TextColor" Value="#fff"></Setter>
+            </Style>
+
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
@@ -32,6 +43,9 @@
                 </Setter>
                 <!--<Setter Value="magenta" Property="Background"></Setter>-->
             </Style>
+
+
+            
         </ResourceDictionary>        
     </Application.Resources>
 </Application>

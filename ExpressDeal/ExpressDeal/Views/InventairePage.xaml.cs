@@ -50,10 +50,20 @@ namespace ExpressDeal.Views
             }
         }
 
+        // créer un nouveau materiel existant dans inventaire
         private async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
             NouveauMaterielDansInventaire page = new NouveauMaterielDansInventaire();
-            await Navigation.PushAsync(new NavigationPage(page));
+            await Navigation.PushModalAsync(new NavigationPage(page)); // ajoute page sous forme modal, on peut revenir avec PopModalAsync
+            // Navigation.PushAsync  ajoute une page mais pour revenir PopAsync ne marche pas
+        }
+
+        // créer un nouveau matériel
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            AjoutMateriel am = new AjoutMateriel();
+            await Navigation.PushModalAsync(new NavigationPage(am));
+
         }
     }
 }

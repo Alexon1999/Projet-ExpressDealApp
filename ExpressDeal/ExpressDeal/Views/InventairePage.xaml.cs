@@ -39,14 +39,17 @@ namespace ExpressDeal.Views
             lvInventaire.ItemsSource = lesInventaires;
         }
 
-
+        // detail de materiel selectionné
         private async void lvInventaire_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if(lvInventaire.SelectedItem != null)
             {
                 Inventaire inv = (lvInventaire.SelectedItem as Inventaire);
                 // This will push the MaterielDetailPage onto the navigation stack
-                await Shell.Current.GoToAsync($"{nameof(MaterielDetailPage)}?id={inv.id}");
+                // await Shell.Current.GoToAsync($"{nameof(MaterielDetailPage)}?id={inv.id}");
+
+                MaterielDetailPage page = new MaterielDetailPage(inv.idMateriel);
+                await Navigation.PushModalAsync(new NavigationPage(page));
             }
         }
 

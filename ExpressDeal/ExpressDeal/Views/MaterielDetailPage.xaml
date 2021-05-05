@@ -10,22 +10,26 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <StackLayout Margin="0,20,0,0">
+        <ScrollView>
+            <StackLayout Margin="0,20,0,0">
+                <FlexLayout Direction="Column" >
+                    <Label Text="{Binding nom}" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="{StaticResource Heading}" Padding="0"> </Label>
+                    <Label Text="{Binding taille}" FontSize="Caption" Padding="10,0,10,0" HorizontalTextAlignment="Center"></Label>
+                 </FlexLayout>
             
+                <Label Text="{Binding description}" Padding="10,0,10,0" HorizontalTextAlignment="Center"></Label>
+                <Label Text="{Binding marque , StringFormat='Marque : {0:F2}' }" Padding="10,0,10,0" HorizontalTextAlignment="Center"></Label>
+                <Label Text="{Binding dureeLocation , StringFormat='Duree de Location : {0:D} jours' }" Padding="10,0,10,0" HorizontalTextAlignment="Center"></Label>
+                <Label Text="{Binding coutLocation , StringFormat='Coût de Location : {0:F2} €' }" Padding="10,0,10,0" HorizontalTextAlignment="Center">
+                </Label>
+                <Label Text="{Binding coutRemplacement , StringFormat='Coût de Remplacement : {0:F2} €' }" Padding="10,0,10,0" HorizontalTextAlignment="Center">
+                </Label>
+                <Label Text="{Binding categorie.Nom , StringFormat='Categorie : {0:F2}' }" Padding="10,0,10,0" HorizontalTextAlignment="Center">
+                </Label>
 
-            <FlexLayout Direction="Column" >
-                <Label Text="{Binding nom}" HorizontalTextAlignment="Center" FontSize="Medium" TextColor="{StaticResource Heading}" Padding="0"> </Label>
-                <Label Text="{Binding taille}" FontSize="Caption" Padding="10,0,10,0" HorizontalTextAlignment="Center"></Label>
-             </FlexLayout>
-            
-            <Label Text="{Binding description}" Padding="10,0,10,0" HorizontalTextAlignment="Center"></Label>
-            <Label Text="{Binding marque , StringFormat='Marque : {0:F2}' }" Padding="10,0,10,0" HorizontalTextAlignment="Center"></Label>
-            <Label Text="{Binding dureeLocation , StringFormat='Duree de Location : {0:D} jours' }" Padding="10,0,10,0" HorizontalTextAlignment="Center"></Label>
-            <Label Text="{Binding coutLocation , StringFormat='Coût de Location : {0:F2} €' }" Padding="10,0,10,0" HorizontalTextAlignment="Center">
-            </Label>
-            <Label Text="{Binding coutRemplacement , StringFormat='Coût de Remplacement : {0:F2} €' }" Padding="10,0,10,0" HorizontalTextAlignment="Center">
-            </Label>
-            
-        </StackLayout>
+                <Button Text="Modifier" Clicked="Button_Clicked" Padding="10" Margin="20,20,20,0"></Button>
+                <Button Text="Retour" Clicked="Button_Clicked_1" Padding="10" Margin="20,20,20,0"></Button>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -6,7 +6,7 @@ namespace ExpressDeal.ClasseMetier
 {
     public class Inventaire
     {
-        public int id { get; set; }
+        public int idMateriel { get; set; }
         public string nomMateriel { get; set; }
         public int quantite { get; set; }
     }

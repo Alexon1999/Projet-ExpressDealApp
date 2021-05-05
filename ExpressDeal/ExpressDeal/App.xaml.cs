@@ -9,7 +9,7 @@ namespace ExpressDeal
     public partial class App : Application
     {
         public static UserConnexion user;
-        public static string api_url = "https://3e44009155db.ngrok.io";
+        public static string api_url = "https://0a6c4e106098.ngrok.io";
         public App()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace ExpressDeal
 
         protected override void OnStart()
         {
-            user = null;
+           // user = null;
         }
 
         protected override void OnSleep()

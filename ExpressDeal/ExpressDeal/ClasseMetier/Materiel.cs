@@ -18,6 +18,8 @@ namespace ExpressDeal.ClasseMetier
         public double coutLocation { get; set; }
         public double coutRemplacement { get; set; }
 
+        // un objet Categorie
+        public Categorie categorie { get; set; }
 
     }
 }

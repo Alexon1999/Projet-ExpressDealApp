@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpressDeal.Views.LocationNonRendus" Title="Locations Non Rendus">
+    <ContentPage.Content>
+        <Grid Padding="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <FlexLayout JustifyContent="SpaceBetween"  Grid.Row="0">
+                <Label Text="Id"  Font ="Bold"></Label>
+                <Label Text="Nom" Font ="Bold"></Label>
+                <Label Text="Client" Font ="Bold"></Label>
+            </FlexLayout>
+
+            <ListView Grid.Row="1" x:Name="lvLocationsNonRendus">
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell >
+                            <ViewCell.View >
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="10"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition Width="45"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <Label Grid.Column="0" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center"
+                                            FontSize="16"
+                                                
+                                            Text="{Binding IdLocation}"></Label>
+                                    <Label Grid.Column="1"  Grid.Row="0" x:Name="lblNomMateriel"  HorizontalOptions="Center" VerticalOptions="Center"  HorizontalTextAlignment="Center" FontSize="14"
+                                            Text="{Binding NomMateriel}" ></Label>
+                                    <Label Grid.Column="2"  Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="9"
+                                            Text="{Binding NomClient}" ></Label>
+                                </Grid>
+
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -18,6 +18,7 @@ namespace ExpressDeal.Views
             InitializeComponent();
         }
 
+        // Inventaire
         private async void Button_Clicked(object sender, EventArgs e)
         {
             //Toast.MakeText(Android.App.Application.Context, App.user.nom, ToastLength.Short).Show();
@@ -25,10 +26,14 @@ namespace ExpressDeal.Views
             await Navigation.PushModalAsync(new NavigationPage(page));
         }
 
-        private void Button_Clicked_1(object sender, EventArgs e)
+        // Locations
+        private async void Button_Clicked_1(object sender, EventArgs e)
         {
-
+            LocationsPage page = new LocationsPage();
+            await Navigation.PushModalAsync(new NavigationPage(page));
         }
+
+        // Informations
 
         private void Button_Clicked_2(object sender, EventArgs e)
         {

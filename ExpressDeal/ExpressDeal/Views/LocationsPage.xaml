@@ -1,21 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ExpressDeal.Views.InventairePage" Title="Inventaire"  >
-
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem Text="Ajouter dans Inventaire   🛒"  Clicked="ToolbarItem_Clicked" />
-    </ContentPage.ToolbarItems>-->
-    
+             x:Class="ExpressDeal.Views.LocationsPage" Title="Locations">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="2"></RowDefinition>
+                <RowDefinition Height="25"></RowDefinition>
                 <RowDefinition ></RowDefinition>
                 <RowDefinition Height="120"></RowDefinition>
             </Grid.RowDefinitions>
 
-
+            <Label Text="Historique des locations" Grid.Row="0" TextColor="#7b113a" HorizontalTextAlignment="Center" Margin="0,5,0,0"></Label>
             <Grid Grid.Row="1" Padding="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"></RowDefinition>
@@ -23,34 +18,34 @@
                 </Grid.RowDefinitions>
 
                 <FlexLayout JustifyContent="SpaceBetween"  Grid.Row="0">
-                    <Label Text="id"  Font ="Bold"></Label>
+                    <Label Text="Id"  Font ="Bold"></Label>
                     <Label Text="Nom" Font ="Bold"></Label>
-                    <Label Text="Quantite" Font ="Bold"></Label>
+                    <Label Text="Client" Font ="Bold"></Label>
                 </FlexLayout>
 
-                <ListView Grid.Row="1" x:Name="lvInventaire" ItemSelected="lvInventaire_ItemSelected"  >
+                <ListView Grid.Row="1" x:Name="lvLocations"   >
                     <ListView.ItemTemplate >
                         <DataTemplate >
                             <ViewCell >
                                 <ViewCell.View >
                                     <Grid>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="20"></ColumnDefinition>
+                                            <ColumnDefinition Width="10"></ColumnDefinition>
                                             <ColumnDefinition></ColumnDefinition>
-                                            <ColumnDefinition Width="30"></ColumnDefinition>
+                                            <ColumnDefinition Width="45"></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
-                                       
+
 
                                         <Label Grid.Column="0" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center"
                                             FontSize="16"
                                                 
-                                            Text="{Binding idMateriel}"></Label>
+                                            Text="{Binding IdLocation}"></Label>
                                         <Label Grid.Column="1"  Grid.Row="0" x:Name="lblNomMateriel"  HorizontalOptions="Center" VerticalOptions="Center"  HorizontalTextAlignment="Center" FontSize="14"
-                                            Text="{Binding nomMateriel}" ></Label>
-                                        <Label Grid.Column="2"  Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontSize="16"
-                                            Text="{Binding quantite}" ></Label>
+                                            Text="{Binding NomMateriel}" ></Label>
+                                        <Label Grid.Column="2"  Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="9"
+                                            Text="{Binding NomClient}" ></Label>
                                     </Grid>
-                                    
+
                                 </ViewCell.View>
                             </ViewCell>
                         </DataTemplate>
@@ -60,11 +55,11 @@
             </Grid>
 
             <StackLayout Grid.Row="2" Padding="10">
-                <Button Text="Créer un matériel" Margin="0,0,0,5" Clicked="Button_Clicked" ></Button>
-                <Button Text="Ajouter Materiels dans inventaire    🛒" Clicked="ToolbarItem_Clicked" ></Button>
+                <Button Text="Locations non rendus" Clicked="Button_Clicked"></Button>
+                <Button Text="Ajouter une location" Clicked="Button_Clicked_1" ></Button>
             </StackLayout>
-            
-            
+
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>

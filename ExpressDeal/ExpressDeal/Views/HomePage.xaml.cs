@@ -33,11 +33,12 @@ namespace ExpressDeal.Views
             await Navigation.PushModalAsync(new NavigationPage(page));
         }
 
-        // Informations
+        // Statistiques
 
-        private void Button_Clicked_2(object sender, EventArgs e)
+        private async void Button_Clicked_2(object sender, EventArgs e)
         {
-
+            StatistiquesPage page = new StatistiquesPage();
+            await Navigation.PushModalAsync(new NavigationPage(page));
         }
     }
 }

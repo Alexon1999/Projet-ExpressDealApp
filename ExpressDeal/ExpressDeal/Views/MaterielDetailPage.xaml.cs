@@ -47,10 +47,14 @@ namespace ExpressDeal.Views
         // modifier btn
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            ModifierMateriel page = new ModifierMateriel(selectedMateriel);
-            await Navigation.PushModalAsync(new NavigationPage(page));
+            if (selectedMateriel != null)
+            {
+                ModifierMateriel page = new ModifierMateriel(selectedMateriel);
+                await Navigation.PushModalAsync(new NavigationPage(page));
+            }
         }
 
+        // retour btn
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();

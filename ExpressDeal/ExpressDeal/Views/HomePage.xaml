@@ -10,7 +10,7 @@
                 />
             <Button Text="Inventaire" Margin="0,0,0,10" Clicked="Button_Clicked"></Button>
             <Button Text="Locations" Margin="0,0,0,10" Clicked="Button_Clicked_1"></Button>
-            <Button Text="Informations" Margin="0,0,0,10" Clicked="Button_Clicked_2"></Button>
+            <Button Text="Statistiques" Margin="0,0,0,10" Clicked="Button_Clicked_2"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

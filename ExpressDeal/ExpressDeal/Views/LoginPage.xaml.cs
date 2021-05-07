@@ -68,9 +68,10 @@ namespace ExpressDeal.Views
                         // Toast.MakeText(Android.App.Application.Context, "autoriser : " + data.autoriser.ToString(), ToastLength.Short).Show();
                         // $" {} " : template litteral
                         // replaces the navigation stack : // 
-                        await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+
                         login.Text = "";
                         mdp.Text = "";
+                        await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
                     }
                     else
                     {

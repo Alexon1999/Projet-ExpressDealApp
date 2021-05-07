@@ -26,6 +26,15 @@ namespace ExpressDeal.Views
             // this.BindingContext = new LoginViewModel();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            mdp.Text = "";
+            login.Text = "";
+
+        }
+
         private async void Button_Clicked(object sender, EventArgs e)
         {
             if ((login.Text == null &&  mdp.Text == null) || (login.Text == "" && mdp.Text == ""))
@@ -69,8 +78,9 @@ namespace ExpressDeal.Views
                         // $" {} " : template litteral
                         // replaces the navigation stack : // 
 
-                        login.Text = "";
                         mdp.Text = "";
+                        login.Text = "";
+
                         await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
                     }
                     else

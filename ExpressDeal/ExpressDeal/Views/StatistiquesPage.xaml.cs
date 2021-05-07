@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Newtonsoft.Json;
 using System.Net.Http;
+using ExpressDeal.ClasseMetier;
 
 namespace ExpressDeal.Views
 {
@@ -39,7 +40,12 @@ namespace ExpressDeal.Views
             txtMaterielPlusEmpruntes.Text = json.materielPlusEmpruntes.nomMateriel;
             txtMaterielMoinsEmpruntes.Text = json.materielMoinsEmpruntes.nomMateriel;
 
+            ws = new HttpClient();
+            response = await ws.GetAsync(App.api_url + "/get_client_fidele");
+            content = await response.Content.ReadAsStringAsync();
+            Client clientFidele = JsonConvert.DeserializeObject<Client>(content);
 
+            txtClient.Text = clientFidele.NomPrenom;
         }
     }
 }

@@ -17,7 +17,7 @@ namespace ExpressDeal.Views
     public partial class MaterielDetailPage : ContentPage
     {
         HttpClient ws;
-        Materiel selectedMateriel;
+        Materiel selectedMateriel; // un objet Materiel, ici il est null
 
         // public string id { get; set; }
         int idMateriel;

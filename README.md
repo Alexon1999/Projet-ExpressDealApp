@@ -2,4 +2,4 @@
 <br>
 
 <!-- ![app-demo](https://i.imgur.com/78UNw6x.gif) -->
-<img src="https://i.imgur.com/78UNw6x.gif" height="600" style="display: block; margin:auto;">
+<img src="https://imgur.com/mm9OYgY" height="600" style="display: block; margin:auto;">

@@ -26,6 +26,8 @@ namespace ExpressDeal.Views
 
         protected override async void OnAppearing()
         {
+            base.OnAppearing();
+
             lesMateriels = new List<string>();
 
 

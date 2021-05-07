@@ -22,14 +22,14 @@
                             <ViewCell.View >
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="10"></ColumnDefinition>
+                                        <ColumnDefinition Width="15"></ColumnDefinition>
                                         <ColumnDefinition></ColumnDefinition>
                                         <ColumnDefinition Width="45"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
 
 
                                     <Label Grid.Column="0" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center"
-                                            FontSize="16"
+                                            FontSize="12"
                                                 
                                             Text="{Binding IdLocation}"></Label>
                                     <Label Grid.Column="1"  Grid.Row="0" x:Name="lblNomMateriel"  HorizontalOptions="Center" VerticalOptions="Center"  HorizontalTextAlignment="Center" FontSize="14"

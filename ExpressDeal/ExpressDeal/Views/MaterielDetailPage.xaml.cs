@@ -28,6 +28,8 @@ namespace ExpressDeal.Views
         }
 
         protected override async void OnAppearing() {
+            base.OnAppearing();
+
             // Toast.MakeText(Android.App.Application.Context, id, ToastLength.Short).Show();
 
             // requete http 

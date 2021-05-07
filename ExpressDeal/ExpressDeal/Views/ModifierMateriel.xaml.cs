@@ -17,7 +17,6 @@ namespace ExpressDeal.Views
     {
         HttpClient ws;
         Materiel selectedMateriel;
-        public string id { get; set; }
         public ModifierMateriel(Materiel unMateriel)
         {
             InitializeComponent();
@@ -27,6 +26,7 @@ namespace ExpressDeal.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+
             entryNom.Text = selectedMateriel.nom;
             entryMarque.Text = selectedMateriel.marque;
             entryCoutLocation.Text = selectedMateriel.coutLocation.ToString();
